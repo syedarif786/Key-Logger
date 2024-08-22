@@ -11,6 +11,8 @@ startBtn.addEventListener('click',()=>{
 });
 
 stopBtn.addEventListener('click',()=>{
+    document.removeEventListener('keydown',handleDown);
+    document.removeEventListener('keyup',handleUp);
    logDiv.textContent = "";
     stateDiv.textContent = "";
     startBtn.disabled=false;
